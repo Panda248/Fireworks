@@ -12,6 +12,7 @@ public class Game extends BasicGameState
 {	
 	private int id;
 	private Firework firework;
+	private Star[] starfield;
 	public Game(int id) 
 	{
 		this.id = id;
@@ -27,17 +28,30 @@ public class Game extends BasicGameState
 		// This code happens when you enter a game state for the *first time.*
 		gc.setShowFPS(true);
 		firework = new Firework();
+		starfield = new Star[1000];
+		for(int i = 0; i < starfield.length; i++)
+		{
+			starfield[i] = new Star();
+		}
 	}
 
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException
 	{	
 		// This is updates your game's logic every frame.  NO DRAWING.
 		firework.update();
+		for(Star i : starfield)
+		{
+			i.update();
+		}
 	}
 
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException 
 	{
 		// This code renders shapes and images every frame.
+		for(Star i : starfield)
+		{
+			i.render(g);
+		}
 		firework.render(g);
 	}
 	
