@@ -24,19 +24,19 @@ public class Firework {
             case Input.MOUSE_LEFT_BUTTON:
                 for(int i = 0; i < 20; i++)
                 {
-                    firework1.add(new Particle(x, y, (float)(Math.random()*20 - 10), (float)(Math.random()*20- 10), 5,  100, randomColor()));
+                    firework1.add(new Particle(x, y, (float)(Math.random()*10 - 5), (float)(Math.random()*10- 5), 5,  100, randomColor()));
                 }
                 break;
             case Input.MOUSE_MIDDLE_BUTTON:
                 for(int i = 0; i < 20; i++)
                 {
-                    firework2.add(new Particle(x, y, (float)(Math.random()*10 - 5), (float)(Math.random()*10), 10,  100, randomColor()));
+                    firework2.add(new Particle(x, y, (float)(Math.random()*6 - 3), (float)(Math.random()*6), 10,  100, randomColor()));
                 }
                 break;
             case Input.MOUSE_RIGHT_BUTTON:
                 for(int i = 0; i < 20; i++)
                 {
-                    firework3.add(new Particle(x, y, (float)(Math.random()*20 - 10), (float)(Math.random()*20- 10), 25,  50, randomColor()));
+                    firework3.add(new Particle(x, y, (float)(Math.random()*10 - 5), (float)(Math.random()*10- 5), 15,  50, randomColor()));
                 }
         }
     }
@@ -58,7 +58,7 @@ public class Firework {
             if(counter == 10)
             {
                 for (int j = 0; j < firework2.size(); j++) {
-                    firework1.add(new Particle(firework2.get(j).getX(), firework2.get(j).getY(), (float) (Math.random() * 4 - 2), (float) (Math.random() * 4 - 2), 5, 100, randomColor()));
+                    firework1.add(new Particle(firework2.get(j).getX(), firework2.get(j).getY(), (float) (Math.random() * 4 - 2), (float) (Math.random() * 4 - 2), 5, 50, randomColor()));
                 }
                 counter = 0;
             }

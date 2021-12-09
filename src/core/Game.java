@@ -52,7 +52,10 @@ public class Game extends BasicGameState
 		{
 			i.render(g);
 		}
+		g.setColor(new Color(25,51,0));
+		g.fillRect(0,Main.getScreenHeight()*0.9f, Main.getScreenWidth(), Main.getScreenHeight()/10f);
 		firework.render(g);
+
 	}
 	
 	public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException 

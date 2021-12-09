@@ -1,5 +1,6 @@
 package core;
 
+import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
 
 public class Star {
@@ -17,7 +18,7 @@ public class Star {
     public void update()
     {
 
-        x+=(float)(Math.random()*2);
+        x+=(float)(Math.random()*0.5);
         if(x > Main.getScreenWidth())
         {
             x = 0;
@@ -27,6 +28,7 @@ public class Star {
     }
     public void render(Graphics g)
     {
+        g.setColor(Color.white);
         g.drawOval(x,y,size,size);
     }
 }
